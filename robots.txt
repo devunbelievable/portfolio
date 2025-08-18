@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sy-dev.online/sitemap.xml
