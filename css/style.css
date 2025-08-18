@@ -1,0 +1,157 @@
+        :root {
+            --primary-color: #6e48aa;
+            --secondary-color: #9d50bb;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(270deg, #1a1a2e, #16213e, #0f3460, #533483);
+            background: linear-gradient(to bottom left, #0f172a, #1e1a78, #0f172a);
+            background-size: 800% 800%;
+            animation: gradientAnimation 15s ease infinite;
+            color: var(--light-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.6) !important;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--accent-color) !important;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+
+        /* Hero */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url('https://raw.githubusercontent.com/devunbelievable/devunbelievable/main/images/cat.webp') center/cover no-repeat;
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section titles */
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        /* Cards */
+        .skill-card,
+        .stats-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .skill-card:hover,
+        .stats-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+            color: #fff;
+        }
+
+        /* Contact */
+        .contact-icon {
+            font-size: 2rem;
+            margin: 0 12px;
+            color: #fff;
+            transition: transform .3s, color .3s;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.2);
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .display-4 {
+                font-size: 2rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
