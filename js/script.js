@@ -20,3 +20,11 @@ document.addEventListener('click', function (event) {
         new bootstrap.Collapse(navbar).toggle();
     }
 });
+
+const colors = ["#0f172a", "#334155", "#0f3460", "#533483"];
+let index = 0;
+
+setInterval(() => {
+    index = (index + 1) % colors.length;
+    document.querySelector("meta[name='theme-color']").setAttribute("content", colors[index]);
+}, 4000); 
